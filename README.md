@@ -1,2 +1,0 @@
-# TFC
-Trybe Futebol Clube
