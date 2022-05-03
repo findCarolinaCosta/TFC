@@ -11,6 +11,8 @@ services:
       test: ["CMD", "lsof", "-t", "-i:3000"]
       timeout: 10s
       retries: 5
+    volumes:
+      - ./frontend:/app
     container_name: app_frontend
   backend:
     build: ./backend
@@ -30,6 +32,8 @@ services:
       test: ["CMD", "lsof", "-t", "-i:3001"]
       timeout: 10s
       retries: 5
+    volumes:
+      - ./backend:/app
     container_name: app_backend
   db:
     image: mysql:8.0.21
